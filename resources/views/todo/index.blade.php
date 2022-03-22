@@ -15,6 +15,7 @@
         <div class="row">
             <div class="col">
                 <h1>{{ $name }}'s Todos</h1>
+                <a href='/todos/create' class="btn btn-outline-primary">Create New</a>
 
                 <div class="card">
                     <div class="card-body">
@@ -54,14 +55,14 @@
                     </div>
                 </div>
 
-                <div class="card mt-5">
+                {{-- <div class="card mt-5">
                     <div class="row text-white">
                         <div class="col bg-primary">Ini Col 4</div>
                         <div class="col bg-success">Ini Col 4</div>
                         <div class="col bg-warning">Ini Col 4</div>
                         <div class="col bg-danger">Ini Col 4</div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
