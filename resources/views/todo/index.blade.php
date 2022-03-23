@@ -19,6 +19,10 @@
 
                 <div class="card">
                     <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                            {{ session('status') }}</div>
+                        @endif
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -46,7 +50,7 @@
                                             <form action="todos/{{ $todo->id }}" method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger float-end">Delete</button>
+                                            <button type="submit" class="btn btn-danger">Delete</button>
                                         </form>
                                         </td>
                                     </tr>
