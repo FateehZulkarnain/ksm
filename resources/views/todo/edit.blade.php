@@ -19,14 +19,15 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <form action="/todos" method="post">
+                        <form action="/todos/{{  $todo->id }}" method="post">
                             @csrf
+                            @method('PUT')
                             <div class="form-group">
                                 <label for="Name"></label>
-                                <input type="text" name="name" class="form-control" placeholder="Todo name">
+                                <input type="text" name="name" class="form-control" placeholder="Todo name" value="{{ $todo->name }}">
                                 </div>
 
-                            <button class="btn btn-success float-end mt-4" type="submit"> Submit </button>
+                            <button class="btn btn-success float-end mt-4" type="submit"> Edit Task </button>
                             <a href='/todos' class="btn btn-primary mt-4" type="submit"> Back </a>
                         </form>
 
